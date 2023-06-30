@@ -51,8 +51,6 @@ textInput.addEventListener("keydown", (event) => {
         startTimer();
     }
 
-    letters = textInput.value.length;
-
     keystroke++;
     document.getElementById(i).className = 'active';
 
@@ -61,6 +59,8 @@ textInput.addEventListener("keydown", (event) => {
         textvalue = textvalue.trim();
         textInput.value = textvalue;
     }
+
+    letters = textInput.value.length;
     
     if (text[i].slice(0, letters) == textInput.value) {
         document.getElementById(i).style.color = "black";
