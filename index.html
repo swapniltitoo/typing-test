@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing.com</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <h1>Typing<span style="color: red;">.com</span></h1>
+    </nav>
+
+    <div class="container">
+        <div class="text-container">
+            <ul class="first-row"></ul>
+            <ul class="second-row"></ul>
+        </div>
+
+        <div class="controls">            
+            <input type="text" name="text" id="text" class="textInput" value="" dir="ltr" placeholder="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            
+            <p class="timer">01:00</p>
+            
+            <button onclick="location.reload();">Reload</button>
+        </div>
+        <div class="report">
+            <h5>Report</h5>
+            <ol>
+                <li style="color: rgb(2, 90, 2);">
+                    Words per minute<span class="wpm"></span>
+                </li>
+                <li style="color: rgb(2, 90, 2);">
+                    Accuracy<span class="accuracy"></span>
+                </li>
+                <li style="color: rgb(2, 90, 2);">
+                    Correct keystrokes<span class="right-keystrokes"></span>
+                </li>
+                <li style="color: rgb(193, 9, 9);">
+                    Incorrect keystrokes<span class="wrong-keystrokes"></span>
+                </li>
+                <li style="color: rgb(2, 90, 2);">
+                    Correct words<span class="right-words"></span>
+                </li>
+                <li style="color: rgb(193, 9, 9);">
+                    Incorrect words<span class="wrong-words"></span>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>
