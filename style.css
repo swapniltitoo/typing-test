@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +14,6 @@ nav {
     align-items: center;
     padding: 0 20px;
     font-family: Poppins;
-    background: rgba(255, 255, 255, 1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 nav h1 {
@@ -22,45 +22,52 @@ nav h1 {
 }
 
 body {
-    background: rgba(0, 0, 0, 0.02);
+    background: url(./background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container {
-    width: 800px;
-    height: 400px;
+    width: 740px;
+    height: 230px;
     position: absolute;
-    top: calc(50% + 50px);
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: none;
+    padding: 20px;
+    border-radius: 8px;
+    background: #ffffff89;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .container .text-container {
-    width: 800px;
+    width: 700px;
     height: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid #7a7f8d5f;
     background: rgba(255, 255, 255, 1);
 }
 
 .container .text-container ul {
     height: 40px;
-    width: 800px;
-    padding: 0 30px;
+    width: 700px;
+    padding: 0 10px;
     list-style-type: none;
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 24px;
+    font-size: 22px;
     font-family: Playfair Display;
 }
 
 .container .text-container ul li {
     height: 40px;
-    padding: 0 6px;
+    padding: 0 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -73,7 +80,7 @@ body {
 }
 
 .controls {
-    width: 800px;
+    width: 700px;
     height: 100px;
     display: flex;
     flex-direction: row;
@@ -82,13 +89,13 @@ body {
 }
 
 .controls input {
-    width: 600px;
+    width: 500px;
     height: 50px;
     border-radius: 8px;
     outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 0 30px;
-    font-size: 24px;
+    border: 1px solid #7a7f8d5f;
+    padding: 0 10px;
+    font-size: 22px;
     font-family: Playfair Display;
 }
 
@@ -112,25 +119,33 @@ body {
     outline: none;
     border: none;
     font-family: Playfair Display;
-    background: rgba(0, 0, 0, 0.9);
+    background: #05e0bf;
     color: white;
     font-size: 18px;
 }
 
 .report {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: none;
+    padding: 20px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 1);
+    background: #ffffffc5;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .report h5 {
     width: 300px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,7 +156,7 @@ body {
 
 .report ol {
     width: 300px;
-    height: 250px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,13 +166,48 @@ body {
 .report ol li {
     list-style-type: none;
     width: 300px;
+    min-height: 30px;
     height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     font-weight: 500;
     font-family: Poppins;
     font-size: 14px;
     padding: 0 20px;
     font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.report .wpm-container {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Poppins;
+    padding: 10px;
+}
+
+.report .wpm {
+    font-weight: 550;
+    font-size: 40px;
+}
+
+.report .wpm-container p {
+    font-size: 450;
+}
+
+.report button {
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-family: Playfair Display;
+    background: #01584b;
+    color: white;
+    font-size: 18px;
 }
