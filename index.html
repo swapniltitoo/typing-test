@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing.com</title>
+    <title>Typing Test</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
 
 <body>
     <nav>
-        <h1>Typing<span style="color: red;">.com</span></h1>
+        <h1>Swapnil <span style="color: red;;">Titoo</span></h1>
     </nav>
 
     <div class="container">
@@ -25,31 +25,34 @@
             
             <p class="timer">01:00</p>
             
-            <button onclick="location.reload();">Reload</button>
+            <button onclick="location.reload();">Restart</button>
         </div>
-        <div class="report">
-            <h5>Report</h5>
-            <ol>
-                <li style="color: rgb(2, 90, 2);">
-                    Words per minute<span class="wpm"></span>
-                </li>
-                <li style="color: rgb(2, 90, 2);">
-                    Accuracy<span class="accuracy"></span>
-                </li>
-                <li style="color: rgb(2, 90, 2);">
-                    Correct keystrokes<span class="right-keystrokes"></span>
-                </li>
-                <li style="color: rgb(193, 9, 9);">
-                    Incorrect keystrokes<span class="wrong-keystrokes"></span>
-                </li>
-                <li style="color: rgb(2, 90, 2);">
-                    Correct words<span class="right-words"></span>
-                </li>
-                <li style="color: rgb(193, 9, 9);">
-                    Incorrect words<span class="wrong-words"></span>
-                </li>
-            </ol>
-        </div>
+    </div>
+
+    <div class="report">
+        <h5 style="color: rgb(2, 90, 2);">Result</h5>
+        <ol>
+            <li style="color: rgb(2, 90, 2);" class="wpm-container">
+                <span class="wpm"></span>
+                <p>(Words per minute)</p>
+            </li>
+            <li style="color: rgb(2, 90, 2);">
+               <span>Accuracy:</span><span class="accuracy"></span>
+            </li>
+            <li style="color: rgb(2, 90, 2);">
+                <span>Correct keystrokes:</span><span class="right-keystrokes"></span>
+            </li>
+            <li style="color: rgb(193, 9, 9);">
+                <span>Incorrect keystrokes:</span><span class="wrong-keystrokes"></span>
+            </li>
+            <li style="color: rgb(2, 90, 2);">
+                <span>Correct words:</span><span class="right-words"></span>
+            </li>
+            <li style="color: rgb(193, 9, 9);">
+                <span>Incorrect words:</span><span class="wrong-words"></span>
+            </li>
+        </ol>
+        <button onclick="location.reload();">Restart</button>
     </div>
 </body>
 
