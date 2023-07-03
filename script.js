@@ -1,5 +1,6 @@
 const textInput = document.querySelector('.textInput');
 const textContainer = document.querySelector('.text-container');
+const container = document.querySelector('.container');
 const firstRow = document.querySelector('.text-container .first-row');
 const secondRow = document.querySelector('.text-container .second-row');
 const timer = document.querySelector('.timer');
@@ -46,14 +47,14 @@ function onload() {
     textInput.focus();
 }
 
-textInput.addEventListener("keydown", (event) => {
-    if (i == 0 && textInput.value.length == 0) {
-        startTimer();
-    }
-
+textInput.addEventListener("keyup", (event) => {
+    // if (i == 0 && textInput.value.length == 1) {
+    //     startTimer();
+    //     console.log('hello!')
+    // }
+    
     keystroke++;
-    document.getElementById(i).className = 'active';
-
+    
     if (textInput.value == "" || textInput.value == " ") {
         textvalue = textInput.value;
         textvalue = textvalue.trim();
@@ -68,8 +69,20 @@ textInput.addEventListener("keydown", (event) => {
     } else if (text[i].slice(0, letters) != textInput.value) {
         document.getElementById(i).style.color = "red";
         wrongKeystroke++;
+    } else if (text[i].length < letters) {
+        document.getElementById(i).style.color = "red";
+        wrongKeystroke++;
     }
+});
+
+textInput.addEventListener("keydown", (event) => {
+    if (i == 0 && textInput.value.length == 0) {
+        startTimer();
+    }
+
     
+    document.getElementById(i).className = 'active';
+
     if (event.keyCode == 32) {
         if (text[i] == textInput.value) {
             document.getElementById(i).style.color = "green";
@@ -78,7 +91,7 @@ textInput.addEventListener("keydown", (event) => {
                 rightWord++;
                 i++;
             }
-        } else {
+        } else if (text[i] != textInput.value && textInput.value != "" && textInput.value != " ") {
             document.getElementById(i).style.color = "red";
             if (test == true) {
                 wrongWord++;
@@ -119,14 +132,14 @@ function startTimer() {
 
 function stop() {
     test = false;
-    wpm.innerHTML = `: ${report}`;
-    accuracy.innerHTML = `: ${Math.round((rightKeystroke/keystroke)*100)}%`;
-    rightKeystrokes.innerHTML = `: ${rightKeystroke}`;
-    wrongKeystrokes.innerHTML = `: ${wrongKeystroke}`;
-    rightWords.innerHTML = `: ${rightWord}`;
-    wrongWords.innerHTML = `: ${wrongWord}`;
+    wpm.innerHTML = `${report}`;
+    accuracy.innerHTML = `${Math.round((rightKeystroke/keystroke)*100)}%`;
+    rightKeystrokes.innerHTML = `${rightKeystroke}`;
+    wrongKeystrokes.innerHTML = `${wrongKeystroke}`;
+    rightWords.innerHTML = `${rightWord}`;
+    wrongWords.innerHTML = `${wrongWord}`;
     clearInterval(startTime);
-    textContainer.style.display = 'none';
+    container.style.display = 'none';
     reportContainer.style.display = 'flex';
 }
 
